@@ -12,7 +12,7 @@ config = {
 provider = NlpEngineProvider(nlp_configuration=config)
 nlp_engine = provider.create_engine()
 
-analyzer = AnalyzerEngine()
+analyzer = AnalyzerEngine(nlp_engine=nlp_engine)
 email_recognizer = EmailRecognizer(supported_language="es")
 phone_recognizer = PhoneRecognizer(supported_language="es")
 
